@@ -315,6 +315,8 @@ int main(int argc, char* argv[])
   // std::cout << diff_plaintext_result.size() << std::endl;
   // std::cout << "Target index is: " << target_index << std::endl;
   std::cout << "Target UE context: " << country_db[target_index].second << std::endl;
+  HELIB_NTIMER_STOP(timer_QuerySearch);
+  helib::printNamedTimer(std::cout, "timer_QuerySearch");
 
   return 0;
 }
